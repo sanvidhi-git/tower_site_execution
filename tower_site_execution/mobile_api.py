@@ -208,6 +208,7 @@ def _submissions(filters, limit):
 		for d in frappe.get_all(dt, filters=f, fields=["name", "tower_site", date_field + " as date", "docstatus",
 				extra + " as summary", "modified"], order_by="modified desc", limit=limit):
 			d.kind = kind
+			d.doctype = dt
 			d.status = "Approved" if d.docstatus == 1 else "Pending approval"
 			out.append(d)
 	out.sort(key=lambda d: d.modified, reverse=True)
@@ -217,6 +218,86 @@ def _submissions(filters, limit):
 @frappe.whitelist()
 def my_submissions(limit=40):
 	return _submissions({"owner": frappe.session.user}, cint(limit))
+
+
+SUBMISSION_DOCTYPES = ("Daily Site Report", "Site Material Receipt")
+
+
+@frappe.whitelist()
+def get_submission(doctype, name):
+	"""Full read-only view of one Daily Site Report / Site Material Receipt for the app."""
+	if doctype not in SUBMISSION_DOCTYPES:
+		frappe.throw(_("Not a site submission"), frappe.PermissionError)
+	doc = frappe.get_doc(doctype, name)
+	if doc.owner != frappe.session.user:
+		_check_site(doc.tower_site)  # others' reports: only for sites I am assigned to (PMs: all)
+	dsr = doctype == "Daily Site Report"
+	status = {0: "Pending approval", 1: "Approved", 2: "Cancelled"}[doc.docstatus]
+
+	def full_name(user):
+		return frappe.utils.get_fullname(user) if user else None
+
+	out = {
+		"doctype": doctype,
+		"name": doc.name,
+		"kind": "Daily Report" if dsr else "Material Receipt",
+		"status": status,
+		"docstatus": doc.docstatus,
+		"tower_site": doc.tower_site,
+		"nominal_name": doc.nominal_name,
+		"date": doc.report_date if dsr else doc.receipt_date,
+		"created_on": doc.creation,
+		"created_by": full_name(doc.owner),
+		"approved_by": full_name(doc.modified_by) if doc.docstatus == 1 else None,
+		"approved_on": doc.modified if doc.docstatus == 1 else None,
+		"source": doc.get("source"),
+		"latitude": doc.latitude,
+		"longitude": doc.longitude,
+		"remarks": doc.remarks,
+		"photos": [{"image": p.image, "caption": p.caption} for p in doc.photos],
+		"postings": [],
+	}
+	if dsr:
+		boq = {b.item_code: b.description for b in frappe.get_all(
+			"Tower Site BOQ", filters={"parent": doc.tower_site, "parenttype": "Tower Site"},
+			fields=["item_code", "description"])}
+		out.update({
+			"supervisor_name": doc.supervisor_name,
+			"labour_count": doc.labour_count,
+			"milestone_achieved": doc.milestone_achieved,
+			"work_completed": doc.work_completed,
+			"pending_work": doc.pending_work,
+			"total_expense": doc.total_expense,
+			"work_items": [{"item_code": r.item_code, "description": boq.get(r.item_code) or r.description,
+				"uom": r.uom, "qty_completed": r.qty_completed, "remarks": r.remarks} for r in doc.work_items],
+			"materials": [{"item_code": r.item_code, "item_name": r.item_name, "qty": r.qty, "uom": r.uom,
+				"source_warehouse": r.source_warehouse} for r in doc.materials],
+			"expenses": [{"expense_type": r.expense_type, "amount": r.amount, "description": r.description,
+				"paid_to": r.paid_to, "bill": r.bill} for r in doc.expenses],
+		})
+		links = (("Stock Entry", doc.stock_entry, "Material issued"), ("Journal Entry", doc.journal_entry, "Expenses booked"))
+	else:
+		out.update({
+			"receipt_type": doc.receipt_type,
+			"purchase_order": doc.purchase_order,
+			"supplier": doc.supplier,
+			"source_warehouse": doc.source_warehouse,
+			"indus_warehouse": doc.indus_warehouse,
+			"target_warehouse": doc.target_warehouse,
+			"challan_no": doc.challan_no,
+			"vehicle_no": doc.vehicle_no,
+			"received_by_name": doc.received_by_name,
+			"items": [{"item_code": r.item_code, "item_name": r.item_name, "ordered_qty": r.ordered_qty,
+				"received_qty": r.received_qty, "rejected_qty": r.rejected_qty, "uom": r.uom,
+				"serial_nos": r.serial_nos} for r in doc.items],
+		})
+		links = (("Purchase Receipt", doc.purchase_receipt, "Purchase Receipt"), ("Stock Entry", doc.stock_entry, "Stock transfer"))
+	for dt, link, label in links:
+		if link:
+			ds = frappe.db.get_value(dt, link, "docstatus")
+			out["postings"].append({"label": label, "doctype": dt, "name": link,
+				"status": {0: "Draft", 1: "Posted", 2: "Cancelled"}.get(ds, "")})
+	return out
 
 
 # ------------------------------------------------------------------------ write
