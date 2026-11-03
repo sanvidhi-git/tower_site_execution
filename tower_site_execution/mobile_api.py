@@ -90,7 +90,7 @@ def _save_image(b64, doc, idx, prefix):
 		b64 = b64.split(",", 1)[1]
 	f = frappe.get_doc({
 		"doctype": "File",
-		"file_name": f"{prefix}-{doc.name}-{idx}.jpg",
+		"file_name": f"{doc.name}-{idx}.jpg",
 		"attached_to_doctype": doc.doctype,
 		"attached_to_name": doc.name,
 		"content": base64.b64decode(b64),
