@@ -74,11 +74,23 @@ bench --site <site> install-app tower_site_execution
 
 Then open **Tower Site Settings** and set the company, the Indus Towers customer, the site store warehouse and the site imprest account. Map an expense account on each **Site Expense Type**.
 
-Demo data (fresh site):
+### Sample demo data (test sites only)
+
 ```bash
-bench --site <site> execute tower_site_execution.demo.setup_company
-bench --site <site> execute tower_site_execution.demo.make_demo --kwargs "{'files_dir': '/path/to/indus/po/files'}"
+bench --site <site> tower-demo                          # 30 demo sites in the site's company
+bench --site <site> tower-demo --company "My Company"    # choose the company
+bench --site <site> tower-demo --sites 12               # fewer sites
+bench --site <site> tower-demo --files-dir /path/po     # also import a real Indus PO (.xlsx + .pdf)
+bench --site <site> tower-demo --clear                  # remove all demo transactions and sites
+bench --site <site> tower-demo --clear --clear-masters  # ...and the demo items, suppliers, users
 ```
+
+No shell access (e.g. Frappe Cloud): **Tower Site Settings → Demo → Load Demo Data** (System Manager). This runs as a background job.
+
+The demo creates:
+* **Masters:** customer "Indus Towers Limited", 4 suppliers, site expense accounts and site imprest, a central store with opening stock, a 14-line demo BOQ, stock and service items, and 4 demo logins: rahul (Project Manager) plus santosh, imran and ganesh (supervisors) `@towerdemo.local`, password `Demo@1234`.
+* **Sites:** 30 sites (5 RFI Done, 5 RFI Pending, 5 Work Completed, 10 Work In Progress, 5 Work Not Started). Each has a Sales Order, a project with milestone tasks, a site warehouse and a survey. Depending on its status it also gets daily site reports (material and expenses), JCB/RMC purchase invoices, a vendor PO with material receipts (PO delivery, store transfer, Indus free-issue, plus one left for PM approval), JMR and invoice, and a support visit.
+* **Dates:** documents are back-dated over the last ~5 months, and missing fiscal years are created. Works with or without India Compliance (HSN/SAC codes and GST categories are set). Running it again skips sites that already exist. Every demo site is tagged, so `--clear` removes only demo data.
 
 ## Other modules (standard ERPNext / Frappe HR)
 

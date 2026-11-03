@@ -100,8 +100,8 @@ class SiteMaterialReceipt(Document):
 				d.flags.ignore_permissions = True
 				d.cancel()
 			elif status == 0:
+				self.db_set(field, None)  # unlink first, else the delete is blocked by this link
 				frappe.delete_doc(doctype, name, ignore_permissions=True)
-				self.db_set(field, None)
 
 	def make_purchase_receipt(self):
 		from erpnext.buying.doctype.purchase_order.purchase_order import make_purchase_receipt
