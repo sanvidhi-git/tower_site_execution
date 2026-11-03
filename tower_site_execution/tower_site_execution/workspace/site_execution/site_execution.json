@@ -17,8 +17,8 @@
    "label": "Site Expenses Booked"
   }
  ],
- "content": "[{\"id\": \"ujOeHwdFcA\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Site Status</b></span>\", \"col\": 12}}, {\"id\": \"efAZhnM6Jy\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Total Allocated\", \"col\": 4}}, {\"id\": \"8c1rihtYlK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work Not Started\", \"col\": 4}}, {\"id\": \"NxHddmQAtK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work In Progress\", \"col\": 4}}, {\"id\": \"CsXRpJG2Tr\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work Completed\", \"col\": 4}}, {\"id\": \"8hzUjEcPVJ\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - RFI Pending\", \"col\": 4}}, {\"id\": \"2tRKJC06DP\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - RFI Done\", \"col\": 4}}, {\"id\": \"dRO9YrxPbC\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"khdVipy2eB\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"I2Y1rzw27j\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Import Indus PO\", \"col\": 3}}, {\"id\": \"kooEKqazwJ\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Tower Sites\", \"col\": 3}}, {\"id\": \"7QFMPd3W2X\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Daily Site Report\", \"col\": 3}}, {\"id\": \"yygNdemkvd\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Status Summary\", \"col\": 3}}, {\"id\": \"ajgwb2Mjpv\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Profitability\", \"col\": 3}}, {\"id\": \"wh09CDfgvq\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"TAT & Penalty Tracker\", \"col\": 3}}, {\"id\": \"Zkb6GjHbG8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Joint Measurement\", \"col\": 3}}, {\"id\": \"1RqwkVHWun\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Support Visits\", \"col\": 3}}, {\"id\": \"Y90XYToGwb\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sites by Status\", \"col\": 6}}, {\"id\": \"brqQ7B697w\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sites by Zone\", \"col\": 6}}, {\"id\": \"nommM30DOX\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Daily Site Reports\", \"col\": 6}}, {\"id\": \"fO4WUDlWuX\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Site Expenses Booked\", \"col\": 6}}, {\"id\": \"8yy6Skhj4Y\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"jZ8OvIia8O\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\", \"col\": 12}}, {\"id\": \"G5A2ZnpsoK\", \"type\": \"card\", \"data\": {\"card_name\": \"Site Execution\", \"col\": 4}}, {\"id\": \"qzi4vCK4A4\", \"type\": \"card\", \"data\": {\"card_name\": \"Indus Billing\", \"col\": 4}}, {\"id\": \"FGGbBlaXkD\", \"type\": \"card\", \"data\": {\"card_name\": \"Site Buying\", \"col\": 4}}, {\"id\": \"SIuGIWgIpr\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"VFIV4BLFFQ\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}]",
- "creation": "2026-11-03 14:00:00.000000",
+ "content": "[{\"id\": \"ujOeHwdFcA\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Site Status</b></span>\", \"col\": 12}}, {\"id\": \"efAZhnM6Jy\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Total Allocated\", \"col\": 4}}, {\"id\": \"8c1rihtYlK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work Not Started\", \"col\": 4}}, {\"id\": \"NxHddmQAtK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work In Progress\", \"col\": 4}}, {\"id\": \"CsXRpJG2Tr\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work Completed\", \"col\": 4}}, {\"id\": \"8hzUjEcPVJ\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - RFI Pending\", \"col\": 4}}, {\"id\": \"2tRKJC06DP\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - RFI Done\", \"col\": 4}}, {\"id\": \"dRO9YrxPbC\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"khdVipy2eB\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"I2Y1rzw27j\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Import Indus PO\", \"col\": 3}}, {\"id\": \"kooEKqazwJ\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Tower Sites\", \"col\": 3}}, {\"id\": \"7QFMPd3W2X\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Daily Site Report\", \"col\": 3}}, {\"id\": \"yygNdemkvd\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Status Summary\", \"col\": 3}}, {\"id\": \"ajgwb2Mjpv\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Profitability\", \"col\": 3}}, {\"id\": \"wh09CDfgvq\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"TAT & Penalty Tracker\", \"col\": 3}}, {\"id\": \"Zkb6GjHbG8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Material Receipts\", \"col\": 3}}, {\"id\": \"1RqwkVHWun\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Joint Measurement\", \"col\": 3}}, {\"id\": \"Y90XYToGwb\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Support Visits\", \"col\": 3}}, {\"id\": \"brqQ7B697w\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sites by Status\", \"col\": 6}}, {\"id\": \"nommM30DOX\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sites by Zone\", \"col\": 6}}, {\"id\": \"fO4WUDlWuX\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Daily Site Reports\", \"col\": 6}}, {\"id\": \"8yy6Skhj4Y\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Site Expenses Booked\", \"col\": 6}}, {\"id\": \"jZ8OvIia8O\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"G5A2ZnpsoK\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\", \"col\": 12}}, {\"id\": \"qzi4vCK4A4\", \"type\": \"card\", \"data\": {\"card_name\": \"Site Execution\", \"col\": 4}}, {\"id\": \"FGGbBlaXkD\", \"type\": \"card\", \"data\": {\"card_name\": \"Indus Billing\", \"col\": 4}}, {\"id\": \"SIuGIWgIpr\", \"type\": \"card\", \"data\": {\"card_name\": \"Site Buying\", \"col\": 4}}, {\"id\": \"VFIV4BLFFQ\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"CHD6R26qI6\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}]",
+ "creation": "2026-11-03 15:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -33,7 +33,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Site Execution",
-   "link_count": 5,
+   "link_count": 6,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -67,6 +67,17 @@
    "label": "Daily Site Report",
    "link_count": 0,
    "link_to": "Daily Site Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Material Receipt",
+   "link_count": 0,
+   "link_to": "Site Material Receipt",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -331,7 +342,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-11-03 14:00:00.000000",
+ "modified": "2026-11-03 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Tower Site Execution",
  "name": "Site Execution",
@@ -410,6 +421,13 @@
    "label": "TAT & Penalty Tracker",
    "link_to": "Site TAT Tracker",
    "type": "Report"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Material Receipts",
+   "link_to": "Site Material Receipt",
+   "type": "DocType"
   },
   {
    "color": "Cyan",

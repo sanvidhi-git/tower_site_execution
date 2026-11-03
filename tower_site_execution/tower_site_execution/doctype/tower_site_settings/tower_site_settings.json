@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 0,
- "creation": "2026-11-03 12:00:00.000000",
+ "creation": "2026-11-03 15:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -16,8 +16,11 @@
   "sb_post",
   "auto_post_material_issue",
   "default_site_warehouse",
+  "create_site_warehouse",
+  "site_warehouse_parent",
   "cb_post",
   "auto_post_site_expenses",
+  "submit_purchase_receipt",
   "expense_credit_account",
   "default_cost_center",
   "sb_plan",
@@ -84,9 +87,23 @@
    "label": "Post Material Issue (Stock Entry) for materials used"
   },
   {
+   "description": "Crystal's store; fallback when a site has no warehouse",
    "fieldname": "default_site_warehouse",
    "fieldtype": "Link",
-   "label": "Default Source Warehouse",
+   "label": "Central Store Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "default": "1",
+   "fieldname": "create_site_warehouse",
+   "fieldtype": "Check",
+   "label": "Auto-create a Warehouse per Tower Site"
+  },
+  {
+   "depends_on": "create_site_warehouse",
+   "fieldname": "site_warehouse_parent",
+   "fieldtype": "Link",
+   "label": "Parent Warehouse (group) for Sites",
    "options": "Warehouse"
   },
   {
@@ -98,6 +115,13 @@
    "fieldname": "auto_post_site_expenses",
    "fieldtype": "Check",
    "label": "Post Journal Entry for site expenses"
+  },
+  {
+   "default": "0",
+   "description": "Off: a draft Purchase Receipt is created for stores / accounts to check",
+   "fieldname": "submit_purchase_receipt",
+   "fieldtype": "Check",
+   "label": "Auto-submit Purchase Receipt on verified PO delivery"
   },
   {
    "fieldname": "expense_credit_account",
@@ -126,7 +150,7 @@
  "index_web_pages_for_search": 0,
  "issingle": 1,
  "links": [],
- "modified": "2026-11-03 12:00:00.000000",
+ "modified": "2026-11-03 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Tower Site Execution",
  "name": "Tower Site Settings",

@@ -40,6 +40,7 @@ def post_site_transactions(doc, posting_date, label):
 	remark = _("{0} {1} - Site {2}").format(label, doc.name, doc.tower_site)
 
 	if doc.get("materials") and settings.auto_post_material_issue:
+		site_wh = frappe.db.get_value("Tower Site", doc.tower_site, "site_warehouse")
 		stock_rows = [m for m in doc.materials if frappe.get_cached_value("Item", m.item_code, "is_stock_item")]
 		if stock_rows:
 			se = frappe.new_doc("Stock Entry")
@@ -52,7 +53,12 @@ def post_site_transactions(doc, posting_date, label):
 			se.project = doc.project
 			se.remarks = remark
 			for m in stock_rows:
-				warehouse = m.source_warehouse or settings.default_site_warehouse
+				warehouse = m.source_warehouse
+				if not warehouse:
+					# site stock first (material received at site), else the central store
+					at_site = site_wh and flt(frappe.db.get_value(
+						"Bin", {"item_code": m.item_code, "warehouse": site_wh}, "actual_qty")) >= flt(m.qty)
+					warehouse = site_wh if at_site else settings.default_site_warehouse
 				if not warehouse:
 					frappe.throw(_("Row {0}: Source Warehouse is required for {1}").format(m.idx, m.item_code))
 				se.append(

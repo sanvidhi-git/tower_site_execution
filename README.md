@@ -32,6 +32,17 @@ When the Project Manager submits a report:
 * **Expenses** post a *Journal Entry*: each expense type debits its own expense account, and the site imprest/petty-cash account is credited.
 * BOQ executed qty and % progress update on the site, the site moves to *Work In Progress*, and the selected TAT milestone is marked done.
 
+## Mobile app: Sanvidhi Site
+
+Site staff use the **Sanvidhi Site** Android app ([sanvidhi-git/tower_site_app](https://github.com/sanvidhi-git/tower_site_app)) for daily reports and material receipts, including when offline. The app talks to `tower_site_execution.mobile_api` (token login, sites assigned through the Tower Site *Project Team*, idempotent submissions using `mobile_ref`, photos stored as private files).
+
+**Site Material Receipt** records what reached a site. The Project Manager or stores verifies it by submitting:
+* *Vendor Delivery against PO*: creates a Purchase Receipt into the site warehouse (a draft by default, or auto-submitted per settings). Damaged quantity goes to *Rejected Material*.
+* *Transfer from Store*: creates a Stock Entry (Material Transfer) from the store to the site warehouse
+* *Indus Free-Issue Material*: logged with serial numbers. Indus-owned equipment is never counted as company stock.
+
+Each Tower Site gets its own warehouse under *Tower Sites* (Tower Site Settings → *Auto-create a Warehouse per Tower Site*). Daily Site Report material is issued from the site warehouse when it has enough stock, and otherwise from the central store.
+
 ## Main dashboard
 
 The **Site Execution** workspace has number cards for **Total allocated · Work not started · Work in progress · Work completed · RFI pending · RFI done**. Below them are charts by status, by zone, daily report activity and expenses booked. The **Site Status Summary** report shows the same table with drill-down.

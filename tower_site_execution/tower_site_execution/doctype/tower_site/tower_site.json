@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 0,
  "autoname": "field:indus_site_id",
- "creation": "2026-11-03 12:00:00.000000",
+ "creation": "2026-11-03 15:00:00.000000",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -56,6 +56,7 @@
   "project",
   "sales_order",
   "po_value",
+  "site_warehouse",
   "sb_team",
   "team",
   "tab_ms",
@@ -372,6 +373,13 @@
    "read_only": 1
   },
   {
+   "description": "Material received at site is stocked here; DSR material issues default from here",
+   "fieldname": "site_warehouse",
+   "fieldtype": "Link",
+   "label": "Site Warehouse",
+   "options": "Warehouse"
+  },
+  {
    "fieldname": "sb_team",
    "fieldtype": "Section Break",
    "label": "Project Team"
@@ -530,7 +538,7 @@
  "image_field": null,
  "index_web_pages_for_search": 0,
  "links": [],
- "modified": "2026-11-03 12:00:00.000000",
+ "modified": "2026-11-03 15:00:00.000000",
  "modified_by": "Administrator",
  "module": "Tower Site Execution",
  "name": "Tower Site",

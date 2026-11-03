@@ -170,6 +170,7 @@ def make_masters():
 	s.default_cost_center = frappe.get_cached_value("Company", COMPANY, "cost_center")
 	s.support_months = 12
 	s.submit_sales_order = 1
+	s.create_site_warehouse = 1
 	s.save(ignore_permissions=True)
 	frappe.db.commit()
 	return emps

@@ -39,7 +39,30 @@ class TowerSite(Document):
 			self.create_project()
 
 	def on_update(self):
+		self.ensure_site_warehouse()
 		self.sync_tasks()
+
+	def ensure_site_warehouse(self):
+		"""One warehouse per site (under a 'Tower Sites' group) so material received at site is visible."""
+		settings = get_settings()
+		if self.site_warehouse or not settings.create_site_warehouse:
+			return
+		company = get_company()
+		parent = settings.site_warehouse_parent
+		if not parent:
+			abbr = frappe.get_cached_value("Company", company, "abbr")
+			parent = f"Tower Sites - {abbr}"
+			if not frappe.db.exists("Warehouse", parent):
+				root = frappe.db.get_value("Warehouse", {"company": company, "is_group": 1, "parent_warehouse": ["in", ["", None]]})
+				frappe.get_doc({"doctype": "Warehouse", "warehouse_name": "Tower Sites", "is_group": 1,
+					"company": company, "parent_warehouse": root}).insert(ignore_permissions=True)
+		name = frappe.db.get_value("Warehouse", {"warehouse_name": self.name, "company": company})
+		if not name:
+			wh = frappe.get_doc({"doctype": "Warehouse", "warehouse_name": self.name, "company": company,
+				"parent_warehouse": parent, "is_group": 0})
+			wh.insert(ignore_permissions=True)
+			name = wh.name
+		self.db_set("site_warehouse", name)
 
 	# ------------------------------------------------------------------ setup
 	def load_milestones_from_template(self):

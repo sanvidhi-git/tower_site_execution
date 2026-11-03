@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-03 15:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "ordered_qty",
+  "received_qty",
+  "rejected_qty",
+  "uom",
+  "serial_nos",
+  "remarks",
+  "purchase_order_item"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "columns": 3,
+   "description": "For Indus free-issue material: description as on the Indus challan",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item / Material"
+  },
+  {
+   "columns": 1,
+   "fieldname": "ordered_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Pending on PO",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "received_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Received Qty",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "rejected_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rejected / Damaged"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "description": "Indus equipment serials (SMPS, battery, solar panels...)",
+   "fieldname": "serial_nos",
+   "fieldtype": "Small Text",
+   "label": "Serial Nos"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "purchase_order_item",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Purchase Order Item",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-03 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Site Material Receipt Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
