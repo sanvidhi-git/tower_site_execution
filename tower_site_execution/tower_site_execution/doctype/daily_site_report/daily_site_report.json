@@ -1,0 +1,286 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "DSR-.YYYY.-.#####",
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tower_site",
+  "nominal_name",
+  "project",
+  "report_date",
+  "cb1",
+  "supervisor",
+  "supervisor_name",
+  "labour_count",
+  "milestone_achieved",
+  "latitude",
+  "longitude",
+  "sb_w",
+  "work_completed",
+  "work_items",
+  "sb_m",
+  "materials",
+  "sb_e",
+  "expenses",
+  "total_expense",
+  "sb_p",
+  "photos",
+  "sb_r",
+  "pending_work",
+  "remarks",
+  "sb_l",
+  "stock_entry",
+  "cb_l",
+  "journal_entry",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "tower_site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Site ID",
+   "options": "Tower Site",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tower_site.nominal_name",
+   "fieldname": "nominal_name",
+   "fieldtype": "Data",
+   "label": "Nominal Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tower_site.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "supervisor.employee_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Supervisor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "labour_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Labour Count"
+  },
+  {
+   "description": "Optional: marks this TAT milestone done on the report date",
+   "fieldname": "milestone_achieved",
+   "fieldtype": "Link",
+   "label": "Milestone Achieved Today",
+   "options": "Site Milestone Template"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_w",
+   "fieldtype": "Section Break",
+   "label": "Work Done"
+  },
+  {
+   "fieldname": "work_completed",
+   "fieldtype": "Small Text",
+   "label": "Work Completed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_items",
+   "fieldtype": "Table",
+   "label": "Quantity Completed (against BOQ)",
+   "options": "Site Work Item"
+  },
+  {
+   "fieldname": "sb_m",
+   "fieldtype": "Section Break",
+   "label": "Material Used"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Site Material Used"
+  },
+  {
+   "fieldname": "sb_e",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "label": "Expenses",
+   "options": "Site Expense"
+  },
+  {
+   "fieldname": "total_expense",
+   "fieldtype": "Currency",
+   "label": "Total Expense",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_p",
+   "fieldtype": "Section Break",
+   "label": "Site Photos"
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Table",
+   "label": "Photos",
+   "options": "Site Photo"
+  },
+  {
+   "fieldname": "sb_r",
+   "fieldtype": "Section Break",
+   "label": "Pending Work & Remarks"
+  },
+  {
+   "fieldname": "pending_work",
+   "fieldtype": "Small Text",
+   "label": "Pending Work"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_l",
+   "fieldtype": "Section Break",
+   "label": "Accounting Links"
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Entry",
+   "no_copy": 1,
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "no_copy": 1,
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Site Report",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Daily Site Report",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Project Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Supervisor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "tower_site",
+ "track_changes": 1
+}

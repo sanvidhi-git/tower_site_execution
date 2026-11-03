@@ -1,0 +1,597 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:indus_site_id",
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_site",
+  "indus_site_id",
+  "reference_id",
+  "nominal_name",
+  "principal_opco",
+  "opco_id",
+  "cb_s1",
+  "status",
+  "category",
+  "product_type",
+  "tower_type",
+  "tower_height",
+  "cb_s2",
+  "allocation_date",
+  "feasibility_status",
+  "overall_progress",
+  "on_hold_reason",
+  "sb_loc",
+  "circle",
+  "region",
+  "zone",
+  "district",
+  "area_name",
+  "cb_loc",
+  "latitude",
+  "longitude",
+  "site_address",
+  "site_owner_details",
+  "sb_map",
+  "location",
+  "sb_indus",
+  "zpm_name",
+  "de_name",
+  "acq_name",
+  "acq_tl_name",
+  "cb_indus",
+  "pm_name",
+  "aom_name",
+  "fse_name",
+  "tsp_team",
+  "allotment_remarks",
+  "tab_po",
+  "customer",
+  "po_no",
+  "po_date",
+  "gbpa_no",
+  "cb_po",
+  "project",
+  "sales_order",
+  "po_value",
+  "sb_team",
+  "team",
+  "tab_ms",
+  "hoto_date",
+  "go_ahead_date",
+  "work_start_date",
+  "work_completion_date",
+  "cb_ms",
+  "rfi_raised_date",
+  "rfi_done_date",
+  "support_end_date",
+  "closed_date",
+  "sb_ms2",
+  "milestones",
+  "total_delay_days",
+  "total_penalty",
+  "tab_boq",
+  "boq",
+  "tab_cost",
+  "billed_amount",
+  "material_cost",
+  "expense_cost",
+  "purchase_cost",
+  "cb_cost",
+  "total_cost",
+  "gross_margin",
+  "margin_pct",
+  "costing_updated_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_site",
+   "fieldtype": "Tab Break",
+   "label": "Site"
+  },
+  {
+   "bold": 1,
+   "fieldname": "indus_site_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Indus Site ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "e.g. R/NN-992250",
+   "fieldname": "reference_id",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Reference ID / Project No"
+  },
+  {
+   "fieldname": "nominal_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nominal Name"
+  },
+  {
+   "fieldname": "principal_opco",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Principal OPCO",
+   "options": "\nAirtel\nJio\nVodafone Idea\nBSNL\nOther"
+  },
+  {
+   "fieldname": "opco_id",
+   "fieldtype": "Data",
+   "label": "OPCO Site ID"
+  },
+  {
+   "fieldname": "cb_s1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Work Not Started",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Work Not Started\nWork In Progress\nWork Completed\nRFI Pending\nRFI Done\nClosed\nOn Hold\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nNew Build\nRelocation\nUpgrade\nStrengthening\nO&M\nOther"
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Data",
+   "label": "Product Type"
+  },
+  {
+   "description": "RT Tower / GBT / GBM / Pole ...",
+   "fieldname": "tower_type",
+   "fieldtype": "Data",
+   "label": "Tower Type"
+  },
+  {
+   "fieldname": "tower_height",
+   "fieldtype": "Float",
+   "label": "Tower Height (m)"
+  },
+  {
+   "fieldname": "cb_s2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "allocation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Allocation Date",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "feasibility_status",
+   "fieldtype": "Select",
+   "label": "Feasibility Status",
+   "options": "Pending\nSubmitted\nGo Ahead\nRevision Required\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "overall_progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Work Progress",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.status=='On Hold'",
+   "fieldname": "on_hold_reason",
+   "fieldtype": "Small Text",
+   "label": "On Hold Reason"
+  },
+  {
+   "fieldname": "sb_loc",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "circle",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Circle"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Zone"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "area_name",
+   "fieldtype": "Data",
+   "label": "Area Name"
+  },
+  {
+   "fieldname": "cb_loc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "6"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "6"
+  },
+  {
+   "fieldname": "site_address",
+   "fieldtype": "Small Text",
+   "label": "Site Address"
+  },
+  {
+   "fieldname": "site_owner_details",
+   "fieldtype": "Small Text",
+   "label": "Landlord / Owner Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_map",
+   "fieldtype": "Section Break",
+   "label": "Map"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Site Location"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_indus",
+   "fieldtype": "Section Break",
+   "label": "Indus Contacts"
+  },
+  {
+   "fieldname": "zpm_name",
+   "fieldtype": "Data",
+   "label": "ZPM"
+  },
+  {
+   "fieldname": "de_name",
+   "fieldtype": "Data",
+   "label": "DE"
+  },
+  {
+   "fieldname": "acq_name",
+   "fieldtype": "Data",
+   "label": "ACQ"
+  },
+  {
+   "fieldname": "acq_tl_name",
+   "fieldtype": "Data",
+   "label": "Acquisition TL"
+  },
+  {
+   "fieldname": "cb_indus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pm_name",
+   "fieldtype": "Data",
+   "label": "Indus PM"
+  },
+  {
+   "fieldname": "aom_name",
+   "fieldtype": "Data",
+   "label": "AOM"
+  },
+  {
+   "fieldname": "fse_name",
+   "fieldtype": "Data",
+   "label": "FSE"
+  },
+  {
+   "fieldname": "tsp_team",
+   "fieldtype": "Data",
+   "label": "TSP Team"
+  },
+  {
+   "fieldname": "allotment_remarks",
+   "fieldtype": "Small Text",
+   "label": "Allotment Remarks"
+  },
+  {
+   "fieldname": "tab_po",
+   "fieldtype": "Tab Break",
+   "label": "PO & Team"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Indus PO No"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "gbpa_no",
+   "fieldtype": "Data",
+   "label": "GBPA No"
+  },
+  {
+   "fieldname": "cb_po",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "po_value",
+   "fieldtype": "Currency",
+   "label": "PO Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_team",
+   "fieldtype": "Section Break",
+   "label": "Project Team"
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Table",
+   "label": "Team",
+   "options": "Tower Site Team Member"
+  },
+  {
+   "fieldname": "tab_ms",
+   "fieldtype": "Tab Break",
+   "label": "Milestones & TAT"
+  },
+  {
+   "fieldname": "hoto_date",
+   "fieldtype": "Date",
+   "label": "HOTO Date"
+  },
+  {
+   "fieldname": "go_ahead_date",
+   "fieldtype": "Date",
+   "label": "Feasibility Go-Ahead Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_start_date",
+   "fieldtype": "Date",
+   "label": "Work Start Date"
+  },
+  {
+   "fieldname": "work_completion_date",
+   "fieldtype": "Date",
+   "label": "Work Completion Date"
+  },
+  {
+   "fieldname": "cb_ms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rfi_raised_date",
+   "fieldtype": "Date",
+   "label": "RFI Raised Date"
+  },
+  {
+   "fieldname": "rfi_done_date",
+   "fieldtype": "Date",
+   "label": "RFI Done Date"
+  },
+  {
+   "fieldname": "support_end_date",
+   "fieldtype": "Date",
+   "label": "Support Period Ends"
+  },
+  {
+   "fieldname": "closed_date",
+   "fieldtype": "Date",
+   "label": "Closed Date"
+  },
+  {
+   "description": "Planned dates roll forward from allocation using Indus TAT; hold / curing days extend the next milestone.",
+   "fieldname": "sb_ms2",
+   "fieldtype": "Section Break",
+   "label": "Milestone TAT Tracker"
+  },
+  {
+   "fieldname": "milestones",
+   "fieldtype": "Table",
+   "label": "Milestones",
+   "options": "Tower Site Milestone"
+  },
+  {
+   "fieldname": "total_delay_days",
+   "fieldtype": "Int",
+   "label": "Total Delay Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_penalty",
+   "fieldtype": "Currency",
+   "label": "Penalty Exposure",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_boq",
+   "fieldtype": "Tab Break",
+   "label": "BOQ Progress"
+  },
+  {
+   "fieldname": "boq",
+   "fieldtype": "Table",
+   "label": "BOQ (from Indus PO)",
+   "options": "Tower Site BOQ"
+  },
+  {
+   "fieldname": "tab_cost",
+   "fieldtype": "Tab Break",
+   "label": "Site Costing"
+  },
+  {
+   "fieldname": "billed_amount",
+   "fieldtype": "Currency",
+   "label": "Billed Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "material_cost",
+   "fieldtype": "Currency",
+   "label": "Material Issued",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_cost",
+   "fieldtype": "Currency",
+   "label": "Site Expenses (JV)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_cost",
+   "fieldtype": "Currency",
+   "label": "Purchases / Subcontract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_cost",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "gross_margin",
+   "fieldtype": "Currency",
+   "label": "Margin (PO Value - Cost)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "margin_pct",
+   "fieldtype": "Percent",
+   "label": "Margin %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "costing_updated_on",
+   "fieldtype": "Datetime",
+   "label": "Costing Updated On",
+   "read_only": 1
+  }
+ ],
+ "image_field": null,
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Tower Site",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Project Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Supervisor",
+   "share": 1,
+   "write": 0
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "nominal_name,reference_id,opco_id,status",
+ "show_title_field_in_link": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "nominal_name",
+ "track_changes": 1
+}

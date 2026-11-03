@@ -1,0 +1,260 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "SSV-.YYYY.-.#####",
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tower_site",
+  "nominal_name",
+  "project",
+  "visit_date",
+  "visit_type",
+  "cb1",
+  "engineer",
+  "engineer_name",
+  "indus_ticket_no",
+  "within_support_period",
+  "next_visit_date",
+  "sb_o",
+  "observations",
+  "action_taken",
+  "sb_m",
+  "materials",
+  "sb_e",
+  "expenses",
+  "total_expense",
+  "sb_p",
+  "photos",
+  "sb_l",
+  "stock_entry",
+  "cb_l",
+  "journal_entry",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "tower_site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tower Site",
+   "options": "Tower Site",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tower_site.nominal_name",
+   "fieldname": "nominal_name",
+   "fieldtype": "Data",
+   "label": "Nominal Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tower_site.project",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Visit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Visit Type",
+   "options": "Routine Inspection\nPreventive Maintenance\nService\nBreakdown Repair",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "engineer",
+   "fieldtype": "Link",
+   "label": "Engineer",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "engineer.employee_name",
+   "fieldname": "engineer_name",
+   "fieldtype": "Data",
+   "label": "Engineer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "indus_ticket_no",
+   "fieldtype": "Data",
+   "label": "Indus Ticket / Complaint No"
+  },
+  {
+   "fieldname": "within_support_period",
+   "fieldtype": "Check",
+   "label": "Within Support Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_visit_date",
+   "fieldtype": "Date",
+   "label": "Next Visit Date"
+  },
+  {
+   "fieldname": "sb_o",
+   "fieldtype": "Section Break",
+   "label": "Observations"
+  },
+  {
+   "fieldname": "observations",
+   "fieldtype": "Small Text",
+   "label": "Observations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Small Text",
+   "label": "Action Taken"
+  },
+  {
+   "fieldname": "sb_m",
+   "fieldtype": "Section Break",
+   "label": "Material Used"
+  },
+  {
+   "fieldname": "materials",
+   "fieldtype": "Table",
+   "label": "Materials",
+   "options": "Site Material Used"
+  },
+  {
+   "fieldname": "sb_e",
+   "fieldtype": "Section Break",
+   "label": "Expenses"
+  },
+  {
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "label": "Expenses",
+   "options": "Site Expense"
+  },
+  {
+   "fieldname": "total_expense",
+   "fieldtype": "Currency",
+   "label": "Total Expense",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_p",
+   "fieldtype": "Section Break",
+   "label": "Photos"
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Table",
+   "label": "Photos",
+   "options": "Site Photo"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "sb_l",
+   "fieldtype": "Section Break",
+   "label": "Accounting Links"
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Entry",
+   "no_copy": 1,
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "no_copy": 1,
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Site Support Visit",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Site Support Visit",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Project Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Supervisor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

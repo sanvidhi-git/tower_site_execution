@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "line_no",
+  "item_code",
+  "description",
+  "task_name",
+  "uom",
+  "po_qty",
+  "rate",
+  "po_amount",
+  "executed_qty",
+  "progress",
+  "measured_qty",
+  "billed_qty",
+  "so_detail"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "line_no",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "PO Line"
+  },
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "columns": 1,
+   "fieldname": "task_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Indus Task"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "po_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "PO Qty"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "columns": 1,
+   "fieldname": "po_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "PO Amount"
+  },
+  {
+   "columns": 1,
+   "fieldname": "executed_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Executed Qty",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Progress",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "measured_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "JMR Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billed_qty",
+   "fieldtype": "Float",
+   "label": "Billed Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "so_detail",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sales Order Item",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Tower Site BOQ",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

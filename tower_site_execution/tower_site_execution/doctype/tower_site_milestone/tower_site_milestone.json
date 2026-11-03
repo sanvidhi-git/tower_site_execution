@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "milestone",
+  "tat_days",
+  "penalty_per_day",
+  "planned_date",
+  "actual_date",
+  "hold_days",
+  "delay_days",
+  "penalty_amount",
+  "status",
+  "task",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "milestone",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Milestone",
+   "options": "Site Milestone Template",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "tat_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "TAT Days"
+  },
+  {
+   "fieldname": "penalty_per_day",
+   "fieldtype": "Currency",
+   "in_list_view": 0,
+   "label": "Penalty Per Day"
+  },
+  {
+   "columns": 1,
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planned Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Actual Date"
+  },
+  {
+   "columns": 1,
+   "description": "Days excluded from TAT (environment hold, curing, CIP not available)",
+   "fieldname": "hold_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Hold / Curing Days"
+  },
+  {
+   "columns": 1,
+   "fieldname": "delay_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Delay Days",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "penalty_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Penalty Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nDone\nOverdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "label": "Task",
+   "options": "Task",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Tower Site Milestone",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

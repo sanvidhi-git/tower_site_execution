@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "SFS-.YYYY.-.#####",
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tower_site",
+  "nominal_name",
+  "survey_date",
+  "surveyed_by",
+  "cb1",
+  "indus_decision",
+  "submitted_to_indus_on",
+  "decision_date",
+  "decision_remarks",
+  "sb_f",
+  "soil_type",
+  "site_accessible",
+  "power_availability",
+  "cb2",
+  "water_availability",
+  "landlord_cooperative",
+  "recommended_foundation",
+  "findings",
+  "sb_p",
+  "photos",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "tower_site",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tower Site",
+   "options": "Tower Site",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "tower_site.nominal_name",
+   "fieldname": "nominal_name",
+   "fieldtype": "Data",
+   "label": "Nominal Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "survey_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Survey Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "surveyed_by",
+   "fieldtype": "Link",
+   "label": "Surveyed By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "indus_decision",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Indus Decision",
+   "options": "Pending\nGo Ahead\nRevision Required\nRejected"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "submitted_to_indus_on",
+   "fieldtype": "Date",
+   "label": "Submitted To Indus On"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "decision_date",
+   "fieldtype": "Date",
+   "label": "Decision Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "decision_remarks",
+   "fieldtype": "Small Text",
+   "label": "Decision Remarks"
+  },
+  {
+   "fieldname": "sb_f",
+   "fieldtype": "Section Break",
+   "label": "Findings"
+  },
+  {
+   "fieldname": "soil_type",
+   "fieldtype": "Select",
+   "label": "Soil Type",
+   "options": "\nNormal Soil\nHard Soil\nSoft Rock\nHard Rock\nBlack Cotton\nWater Logged"
+  },
+  {
+   "fieldname": "site_accessible",
+   "fieldtype": "Select",
+   "label": "Site Accessibility",
+   "options": "\nVehicle up to site\nPartial (head-load required)\nNot accessible"
+  },
+  {
+   "fieldname": "power_availability",
+   "fieldtype": "Select",
+   "label": "Power Availability",
+   "options": "\nEB available\nEB nearby\nNo EB (DG / Solar)"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "water_availability",
+   "fieldtype": "Check",
+   "label": "Water Availability"
+  },
+  {
+   "fieldname": "landlord_cooperative",
+   "fieldtype": "Check",
+   "label": "Landlord Cooperative"
+  },
+  {
+   "fieldname": "recommended_foundation",
+   "fieldtype": "Data",
+   "label": "Recommended Foundation"
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Text Editor",
+   "label": "Findings / Constraints"
+  },
+  {
+   "fieldname": "sb_p",
+   "fieldtype": "Section Break",
+   "label": "Photos"
+  },
+  {
+   "fieldname": "photos",
+   "fieldtype": "Table",
+   "label": "Photos",
+   "options": "Site Photo"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Site Feasibility Survey",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Site Feasibility Survey",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Project Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Supervisor",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

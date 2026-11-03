@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "field:milestone_name",
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "milestone_name",
+  "description",
+  "sequence",
+  "tat_days",
+  "cb1",
+  "penalty_per_day",
+  "exceptions_allowed",
+  "applicable_wef",
+  "site_date_field",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "milestone_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Milestone Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description (Indus TAT Stage)"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tat_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "TAT (Days)"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "penalty_per_day",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Penalty per Day"
+  },
+  {
+   "fieldname": "exceptions_allowed",
+   "fieldtype": "Data",
+   "label": "Exceptions Allowed"
+  },
+  {
+   "fieldname": "applicable_wef",
+   "fieldtype": "Data",
+   "label": "WEF"
+  },
+  {
+   "description": "If set, the milestone's actual date is synced from this Tower Site date",
+   "fieldname": "site_date_field",
+   "fieldtype": "Select",
+   "label": "Completion Date Comes From",
+   "options": "\nhoto_date\nwork_start_date\nwork_completion_date\nrfi_raised_date"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Site Milestone Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Project Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "sequence",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1
+}

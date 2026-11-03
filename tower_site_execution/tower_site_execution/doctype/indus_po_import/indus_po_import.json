@@ -1,0 +1,219 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "IPI-.YYYY.-.####",
+ "creation": "2026-11-03 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_f",
+  "po_file",
+  "po_pdf",
+  "cb_f",
+  "allotment_email",
+  "sb_h",
+  "po_no",
+  "po_date",
+  "amendment_no",
+  "cb_h",
+  "gbpa_no",
+  "buyer",
+  "circle",
+  "cb_h2",
+  "indus_site_id",
+  "reference_id",
+  "site_owner",
+  "sb_i",
+  "items",
+  "total_amount",
+  "sb_r",
+  "status",
+  "tower_site",
+  "cb_r",
+  "sales_order",
+  "import_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "sb_f",
+   "fieldtype": "Section Break",
+   "label": "Source Files"
+  },
+  {
+   "description": "Oracle iSupplier PO export (.xlsx) as received from Indus",
+   "fieldname": "po_file",
+   "fieldtype": "Attach",
+   "label": "PO Line Export (Excel)"
+  },
+  {
+   "description": "Optional: PO PDF - fills PO No, dates, GBPA and HSN/SAC codes",
+   "fieldname": "po_pdf",
+   "fieldtype": "Attach",
+   "label": "PO PDF"
+  },
+  {
+   "fieldname": "cb_f",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Optional: paste the Indus site allotment email - site, OPCO, tower, lat/long and Indus contacts are read from it",
+   "fieldname": "allotment_email",
+   "fieldtype": "Long Text",
+   "label": "Allotment Email Text"
+  },
+  {
+   "fieldname": "sb_h",
+   "fieldtype": "Section Break",
+   "label": "PO Header"
+  },
+  {
+   "fieldname": "po_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Indus PO No"
+  },
+  {
+   "fieldname": "po_date",
+   "fieldtype": "Date",
+   "label": "PO Date"
+  },
+  {
+   "fieldname": "amendment_no",
+   "fieldtype": "Data",
+   "label": "Amendment No"
+  },
+  {
+   "fieldname": "cb_h",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gbpa_no",
+   "fieldtype": "Data",
+   "label": "GBPA No"
+  },
+  {
+   "fieldname": "buyer",
+   "fieldtype": "Data",
+   "label": "Buyer"
+  },
+  {
+   "fieldname": "circle",
+   "fieldtype": "Data",
+   "label": "Circle"
+  },
+  {
+   "fieldname": "cb_h2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "indus_site_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Indus Site ID"
+  },
+  {
+   "fieldname": "reference_id",
+   "fieldtype": "Data",
+   "label": "Reference ID / Project No"
+  },
+  {
+   "fieldname": "site_owner",
+   "fieldtype": "Data",
+   "label": "Site Owner (from PO)"
+  },
+  {
+   "fieldname": "sb_i",
+   "fieldtype": "Section Break",
+   "label": "PO Lines"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Indus PO Import Item"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_r",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nParsed\nImported\nError",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tower_site",
+   "fieldtype": "Link",
+   "label": "Tower Site",
+   "options": "Tower Site",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "import_log",
+   "fieldtype": "Small Text",
+   "label": "Import Log",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-11-03 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Indus PO Import",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Site Project Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

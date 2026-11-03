@@ -1,0 +1,430 @@
+{
+ "charts": [
+  {
+   "chart_name": "Sites by Status",
+   "label": "Sites by Status"
+  },
+  {
+   "chart_name": "Sites by Zone",
+   "label": "Sites by Zone"
+  },
+  {
+   "chart_name": "Daily Site Reports",
+   "label": "Daily Site Reports"
+  },
+  {
+   "chart_name": "Site Expenses Booked",
+   "label": "Site Expenses Booked"
+  }
+ ],
+ "content": "[{\"id\": \"ujOeHwdFcA\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Site Status</b></span>\", \"col\": 12}}, {\"id\": \"efAZhnM6Jy\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Total Allocated\", \"col\": 4}}, {\"id\": \"8c1rihtYlK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work Not Started\", \"col\": 4}}, {\"id\": \"NxHddmQAtK\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work In Progress\", \"col\": 4}}, {\"id\": \"CsXRpJG2Tr\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - Work Completed\", \"col\": 4}}, {\"id\": \"8hzUjEcPVJ\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - RFI Pending\", \"col\": 4}}, {\"id\": \"2tRKJC06DP\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sites - RFI Done\", \"col\": 4}}, {\"id\": \"dRO9YrxPbC\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"khdVipy2eB\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Quick Access</b></span>\", \"col\": 12}}, {\"id\": \"I2Y1rzw27j\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Import Indus PO\", \"col\": 3}}, {\"id\": \"kooEKqazwJ\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Tower Sites\", \"col\": 3}}, {\"id\": \"7QFMPd3W2X\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Daily Site Report\", \"col\": 3}}, {\"id\": \"yygNdemkvd\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Status Summary\", \"col\": 3}}, {\"id\": \"ajgwb2Mjpv\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Site Profitability\", \"col\": 3}}, {\"id\": \"wh09CDfgvq\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"TAT & Penalty Tracker\", \"col\": 3}}, {\"id\": \"Zkb6GjHbG8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Joint Measurement\", \"col\": 3}}, {\"id\": \"1RqwkVHWun\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Support Visits\", \"col\": 3}}, {\"id\": \"Y90XYToGwb\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sites by Status\", \"col\": 6}}, {\"id\": \"brqQ7B697w\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Sites by Zone\", \"col\": 6}}, {\"id\": \"nommM30DOX\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Daily Site Reports\", \"col\": 6}}, {\"id\": \"fO4WUDlWuX\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Site Expenses Booked\", \"col\": 6}}, {\"id\": \"8yy6Skhj4Y\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"jZ8OvIia8O\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\", \"col\": 12}}, {\"id\": \"G5A2ZnpsoK\", \"type\": \"card\", \"data\": {\"card_name\": \"Site Execution\", \"col\": 4}}, {\"id\": \"qzi4vCK4A4\", \"type\": \"card\", \"data\": {\"card_name\": \"Indus Billing\", \"col\": 4}}, {\"id\": \"FGGbBlaXkD\", \"type\": \"card\", \"data\": {\"card_name\": \"Site Buying\", \"col\": 4}}, {\"id\": \"SIuGIWgIpr\", \"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"id\": \"VFIV4BLFFQ\", \"type\": \"card\", \"data\": {\"card_name\": \"Setup\", \"col\": 4}}]",
+ "creation": "2026-11-03 14:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "map-pin",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Site Execution",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Execution",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tower Site",
+   "link_count": 0,
+   "link_to": "Tower Site",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Feasibility Survey",
+   "link_count": 0,
+   "link_to": "Site Feasibility Survey",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Daily Site Report",
+   "link_count": 0,
+   "link_to": "Daily Site Report",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Joint Measurement Record",
+   "link_count": 0,
+   "link_to": "Joint Measurement Record",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Support Visit",
+   "link_count": 0,
+   "link_to": "Site Support Visit",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Indus Billing",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Indus PO Import",
+   "link_count": 0,
+   "link_to": "Indus PO Import",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Order",
+   "link_count": 0,
+   "link_to": "Sales Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Buying",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Request",
+   "link_count": 0,
+   "link_to": "Material Request",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Request for Quotation",
+   "link_count": 0,
+   "link_to": "Request for Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier Quotation",
+   "link_count": 0,
+   "link_to": "Supplier Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Order",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Site Status Summary",
+   "link_count": 0,
+   "link_to": "Site Status Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Tower Site",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Site Profitability",
+   "link_count": 0,
+   "link_to": "Site Profitability",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Tower Site",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Site TAT Tracker",
+   "link_count": 0,
+   "link_to": "Site TAT Tracker",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Tower Site",
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Project Summary",
+   "link_count": 0,
+   "link_to": "Project Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tower Site Settings",
+   "link_count": 0,
+   "link_to": "Tower Site Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Milestone Template",
+   "link_count": 0,
+   "link_to": "Site Milestone Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Expense Type",
+   "link_count": 0,
+   "link_to": "Site Expense Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Project",
+   "link_count": 0,
+   "link_to": "Project",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee",
+   "link_count": 0,
+   "link_to": "Employee",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-11-03 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Tower Site Execution",
+ "name": "Site Execution",
+ "number_cards": [
+  {
+   "label": "Sites - Total Allocated",
+   "number_card_name": "Sites - Total Allocated"
+  },
+  {
+   "label": "Sites - Work Not Started",
+   "number_card_name": "Sites - Work Not Started"
+  },
+  {
+   "label": "Sites - Work In Progress",
+   "number_card_name": "Sites - Work In Progress"
+  },
+  {
+   "label": "Sites - Work Completed",
+   "number_card_name": "Sites - Work Completed"
+  },
+  {
+   "label": "Sites - RFI Pending",
+   "number_card_name": "Sites - RFI Pending"
+  },
+  {
+   "label": "Sites - RFI Done",
+   "number_card_name": "Sites - RFI Done"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "#1F6F5C",
+   "doc_view": "List",
+   "label": "Import Indus PO",
+   "link_to": "Indus PO Import",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Tower Sites",
+   "link_to": "Tower Site",
+   "stats_filter": "{\"status\":\"Work In Progress\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Daily Site Report",
+   "link_to": "Daily Site Report",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Site Status Summary",
+   "link_to": "Site Status Summary",
+   "type": "Report"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Site Profitability",
+   "link_to": "Site Profitability",
+   "type": "Report"
+  },
+  {
+   "color": "Red",
+   "doc_view": "",
+   "label": "TAT & Penalty Tracker",
+   "link_to": "Site TAT Tracker",
+   "type": "Report"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Joint Measurement",
+   "link_to": "Joint Measurement Record",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Support Visits",
+   "link_to": "Site Support Visit",
+   "type": "DocType"
+  }
+ ],
+ "title": "Site Execution"
+}
